@@ -1643,7 +1643,7 @@
 	}
 
 		a:hover {
-			color: #E27689;
+			color: #5ace8c;
 			border-bottom-color: rgba(255, 255, 255, 0);
 		}
 
@@ -2104,7 +2104,7 @@
 			}
 
 				#nav ul li a.active span:before {
-					color: #e27689;
+					color: #72ffaf;
 				}
 
 /* Footer */
@@ -2176,7 +2176,7 @@
 					}
 
 			#main > section.cover {
-				padding: 6em 0;
+				/*padding: 6em 0;*/
 				background-size: cover;
 				background-position: center center;
 			}
@@ -2239,7 +2239,7 @@
 			}
 
 			#main section.cover {
-				padding: 5em 0;
+				/*padding: 5em 0;*/
 			}
 
 	}
