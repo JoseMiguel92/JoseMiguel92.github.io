@@ -8,15 +8,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.section .experiences-section ul {
+.estudios ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333333;
 }
 
-.section .experiences-section li {
+.estudios ul li {
   float: left;
 }
 
