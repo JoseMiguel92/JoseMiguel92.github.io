@@ -19,14 +19,6 @@ body {
   float: left;
 }
 
-.nombre :hover{
-  color:red;
-}
-
-.apellidos :hover{
-  color:blue;
-}
-
 h1,
 h2,
 h3,
