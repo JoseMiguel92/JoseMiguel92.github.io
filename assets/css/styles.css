@@ -19,6 +19,20 @@ body {
   float: left;
 }
 
+.study-title{
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.study-date{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.study-place{
+  font-weight: bold;
+}
+
 h1,
 h2,
 h3,
