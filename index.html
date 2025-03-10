@@ -10,204 +10,209 @@
 	<meta name="author" content="Jose Miguel Garcia Benayas" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-
-	<!-- Stlylesheet -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+	<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
-	<!-- Header -->
-	<div id="header">
-		<div class="top">
-			<!-- Logo -->
-			<div id="logo">
-				<h1 id="title">José Miguel García Benayas</h1>
-			</div>
-			<!-- Nav -->
-			<nav id="nav">
-				<ul>
-					<li><a href="#summary" id="top-link" class="skel-layers-ignoreHref"><span
-								class="icon fa-home">Summary</span></a></li>
-					<li><a href="#education" id="education-link" class="skel-layers-ignoreHref"><span
-								class="icon fa-university">Education</span></a></li>
-					<li><a href="#experience" id="experience-link" class="skel-layers-ignoreHref"><span
-								class="icon fa-th">Experience</span></a></li>
-					<li><a href="#work-tech" id="worktech-link" class="skel-layers-ignoreHref"><span
-								class="icon fa-th">Work Technologies</span></a></li>
-					<li><a href="#personal-projects" id="personalprojects-link" class="skel-layers-ignoreHref"><span
-								class="icon fa-th">Personal Projects</span></a></li>
-
-				</ul>
-			</nav>
+<body class="bg-gray-200 dark:bg-gray-900">
+	<div class="mx-auto max-w-md md:max-w-2xl">
+		<div id="description" class="my-4 p-4 bg-gray-900 dark:bg-gray-200 shadow rounded">
+			<h1 class="text-gray-200 dark:text-gray-900 text-xl font-bold">Hola👋, soy Jose Miguel</h1>
+			<h1 class="text-gray-200 dark:text-gray-900 text-l font-bold">Ingeniero Software en Madrid 🚀
+			</h1>
+			<p class="p-4 text-gray-200 dark:text-gray-900">Soy un apasionado de la tecnología 👨🏻‍💻, salir a correr
+				🏃🏻‍♂️, y montar en bicicleta 🚴‍♂️. En mi tiempo libre, me encanta aprender cosas nuevas y trabajar en
+				proyectos personales que supongas un reto para mejorar mis habilidades en el ámbito de la programación
+				usando lenguajes como Java, Python, y Typescript.</p>
+			<p class="p-4 text-gray-200 dark:text-gray-900">Me he especializado en aplicaciones empresariales usando
+				Spring Boot,
+				con la capacidad del intercambio de mensajes mediante colas de mensajes (Kafka), servicios REST y SOAP.
+				Me gusta enfocarme 🎯 en el rendimiento de los sistemas,
+				las buenas prácticas en el código, y las pruebas del mismo.</p>
 		</div>
-		<div class="bottom">
-			<!-- Social Icons -->
-			<ul class="icons">
-				<li><a href="https://www.linkedin.com/in/josemiguelgarciabenayas/" class="fa fa-linkedin fa-2x"><span
-							class="label"></span></a></li>
-				<li><a href="https://github.com/josemiguel92" class="fa fa-github fa-2x"><span class="label"></span></a>
+		<div id="work-experience" class="my-4 p-4 bg-gray-900 dark:bg-gray-200 shadow rounded">
+			<h2 class="text-xl text-gray-400 dark:text-gray-700 font-bold">Experiencia profesional</h2>
+			<ol class="relative border-s border-gray-700 dark:border-gray-700">
+				<li class="mb-10 ms-4">
+					<div
+						class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+					</div>
+					<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Enero
+						2020 - Actualmente</time>
+					<h3 class="text-lg font-bold text-gray-400 dark:text-gray-700">BNP Paribas Personal Finance
+						(Tecdata Engineering), Madrid
+					</h3>
+					<ul class="mb-4 p-4 text-base font-normal text-gray-400 dark:text-gray-700">
+						<li class="mb-2">Diseño y desarrollo de microservicios en <strong>Java 8</strong> y
+							<strong>17</strong> con <strong>Spring Boot</strong> para
+							sistemas financieros críticos.
+						</li>
+						<li class="mb-2">Implementación y optimización de integraciones con <strong>Kafka</strong> para
+							mensajería asíncrona.</li>
+						<li class="mb-2">Desarrollo de servicios REST con <strong>OpenAPI</strong> y arquitecturas
+							orientadas a
+							microservicios en entornos <strong>Cloud (IBM Cloud, Kubernetes)</strong>.</li>
+						<li class="mb-2">Implementación de pruebas unitarias con <strong>JUnit</strong> y
+							<strong>Mockito</strong>.
+						</li>
+						<li class="mb-2">Gestión de bases de datos Oracle con <strong>MyBatis</strong>.</li>
+						<li class="mb-2">Creación de scripts en <strong>Python</strong> para automatización y generación
+							de proyectos
+						</li>
+						<li class="mb-2">Desarrollo frontend de <strong>Single Page Applications (SPA)</strong> en
+							<strong>Angular</strong>.
+						</li>
+						<li class="mb-2">Implementación de CI/CD en <strong>GitLab</strong> y <strong>Jenkins</strong>,
+							asegurando despliegues automatizados y eficientes.</li>
+						<li class="mb-2">Control de calidad del código mediante <strong>SonarQube</strong> y versionado
+							con <strong>Git</strong>.</li>
+						<li class="">Trabajo en entornos multidisciplinares ágiles y colaborativos.</li>
+					</ul>
 				</li>
+				<li class="mb-10 ms-4">
+					<div
+						class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+					</div>
+					<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Febrero 2019 -
+						Enero 2020</time>
+					<h3 class="text-lg font-bold text-gray-400 dark:text-gray-700">Ingeniero software en Fujitsu
+						Technology Solutions (Experis), Madrid
+					</h3>
+					<ul class="mb-4 p-4 text-base font-normal text-gray-400 dark:text-gray-700">
+						<li class="mb-2">Evolución y mantenimiento de aplicaciones web empresariales en <strong>Java
+								6</strong> con <strong>Java Server Pages</strong>.
+						</li>
+						<li class="mb-2">Desarrollo de servicios <strong>SOAP</strong> con <strong>Apache CXF</strong> y
+							<strong>REST</strong> con <strong>Spring</strong>, asegurando la integración con sistemas
+							externos.
+						</li>
+						<li class="mb-2">Integración de clientes <strong>SOAP</strong> y <strong>REST</strong> para
+							consumo de servicios de terceros. Gestión de bases de datos Oracle con
+							<strong>Hibernate</strong>.
+						</li>
+						<li class="mb-2">Desarrollo frontend en <strong>HTML</strong>, <strong>CSS</strong> y
+							<strong>JavaScript</strong>, aplicando principios de accesibilidad y usabilidad.
+						</li>
+						<li class="mb-2">Implementación de pruebas unitarias con <strong>JUnit</strong> y
+							<strong>Mockito</strong>.
+						</li>
+						<li class="mb-2">Control de calidad del código con <strong>SonarQube</strong> y control de
+							versiones mediante <strong>Subversion</strong>.
+						</li>
+						<li class="">Despliegue y configuración de aplicaciones en <strong>IBM WebSphere</strong>.
+						</li>
+					</ul>
+				</li>
+				<li class="mb-10 ms-4">
+					<div
+						class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+					</div>
+					<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Septiembre 2017
+						- Junio 2018</time>
+					<h3 class="text-lg font-semibold text-gray-400 dark:text-gray-700">Prácticas en Fujitsu Technology
+						Solutions, Madrid</h3>
+					<ul class="mb-4 p-4 text-base font-normal text-gray-400 dark:text-gray-700">
+						<li class="mb-2">Investigación sobre la plataforma <strong>K5 Cloud</strong> y su aplicación en
+							entornos empresariales.
+						</li>
+						<li class="mb-2">Desarrollo de aplicaciones web en <strong>Java 8</strong> con <strong>Spring
+								Boot</strong>, aplicando la metodología <strong>Twelve-Factor App</strong> para
+							despliegues en cloud.</li>
+						<li class="mb-2">Creación e integración de servicios web <strong>SOAP</strong> para comunicación
+							entre sistemas.</li>
+						<li class="mb-2">Implementación de pruebas unitarias con <strong>JUnit</strong> y despliegue de
+							aplicaciones en <strong>Tomcat</strong>.
+						</li>
+						<li class="">Control de versiones con <strong>Subversion</strong> y documentación técnica de
+							procesos y soluciones.</li>
+					</ul>
+				</li>
+			</ol>
+		</div>
+		<div id="academic" class="my-4 p-4 bg-gray-900 dark:bg-gray-200 shadow rounded">
+			<h2 class="text-xl text-gray-400 dark:text-gray-700 font-bold">Formación académica</h2>
+			<ul class="mb-4 p-4 text-base font-normal text-gray-400 dark:text-gray-700 list-disc">
+				<li class="mb-2 font-semibold">Grado en Ingeniería Software Universidad Rey Juan Carlos, 2020</li>
+				<li class="mb-2 font-medium">Angular y Angular avanzado Udemy, 2024</li>
+				<li class="mb-2 font-medium">Reactive Architecture: Domain Driven Design Cognitive Class, 2023</li>
+				<li class="mb-2 font-medium">Introduction to Containers, Kubernetes, and OpenShift V2 Cognitive Class, 2023</li>
+				<li class="mb-2 font-medium">Scrum Foundations Professional Certificate CertiProf, 2021</li>
+				<li class="mb-2 font-medium">Docker - Guía práctica de uso para desarrolladores Udemy, 2020</li>
+				<li class="font-medium">Agilidad y Lean Gestionando los proyectos y negocios del s. XXI MiriadaX, 2016</li>
 			</ul>
 		</div>
-	</div>
-	<!-- Main -->
-	<div id="main">
-		<!-- Intro -->
-		<section id="summary" class="one dark cover">
-			<div class="container">
-				<header>
-					<h2 class="alt">Hey! </h2>
-					<p>Here you can find my personal info about education and experience.</p>
-				</header>
-			</div>
-		</section>
-		<!-- Education -->
-		<section id="education" class="two">
-			<div class="container">
-				<header>
-					<h2>Education</h2>
-				</header>
-				<article>
-					<h3>Software Engineer Degree</h3>
-					<p>Final degree project on
-					the application of the GRASP metaheuristic algorithm to MRCP (Maximal Ratio Clique
-					Problem)<a href="https://github.com/JoseMiguel92/mrcp-document">In this link you can check documentation about the project.</a></p>
-				</article>
-				<article>
-					<h3>Mobile application development course</h3>
-					<p>Course conducted through the Google Activate! platform on basic aspects of design, creation and
-						development of mobile apps, offered by the Universidad Complutense de Madrid.</p>
-				</article>
-				<header>
-					<h3>Languages</h3>
-				</header>
-				<article>
-					<p>Spanish</p>
-					<p>English</p>
-				</article>
 
-		</section>
-		<!-- Experience -->
-		<section id="experience" class="two">
-			<div class="container">
-				<header>
-					<h2>Experience</h2>
-				</header>
-				<article>
-					<h4>BNP Paribas Personal Finance Spain</h4>
-					<p><span class="date"><time datetime="2020-01">Januray 2020</time> to present.</span><br />
-						Development of microservices in Java using SpringBoot. Software adaptation and modernization.
-						Code quality control and versioning.
-						Testing with jUnit and Mockito.
-						Docker and WebLogic deployments.
-					</p>
-				</article>
-				<article>
-					<h4>Fujitsu Technology Solutions</h4>
-					<p><span class="date"><time datetime="2019-02">February 2019</time> to <time datetime="2020-01">January 2020</time>.</span><br />
-						Evolution and development of applications and web services in Java 6-8. Integration of SOAP web clients through Apache
-						CXF and REST through Spring.
-						Code quality control using Sonar.
-						Front-end development in HTML5, CSS3 and JavaScript.
-						Version control using SubVersion.
-						Unit testing with jUnit and Mockito.
-						WebSphere application server deployment.
-					</p>
-				</article>
-				<article>
-					<h4>Fujitsu Technology Solutions (Intern)</h4>
-					<p><span class="date"><time datetime="2017-09">September 2017</time> to <time datetime="2018-06">June 2018</time>.</span><br/>
-						Research on K5 Cloud platform and development of SpringBoot cloud-centric applications using Twelve-Factor App
-						methodology.<br/>
-						Web application development focused on the backend, integration and creation of SOAP web services.
-						Version control using SubVersion. Unit testing using jUnit. Deployment of applications on Tomcat.
-					</p>
-				</article>
-			</div>
-		</section>
-		<!-- Work Technologies -->
-		<section id="work-tech" class="two">
-			<div class="container">
-				<header>
-					<h2>Work technologies</h2>
-				</header>
-				<article>
-					<p>Java</p>
-					<p>Spring Framework</p>
-					<p>SpringBoot</p>
-					<p>jUnit</p>
-					<p>Mockito</p>
-					<p>Swagger</p>
-					<p>Postman</p>
-					<hr />
-					<p>Git</p>
-					<p>SVN</p>
-					<hr />
-					<p>Hibernate</p>
-					<p>MySQL</p>
-					<p>SQLServer</p>
-					<p>OracleDB</p>
-					<hr />
-					<p>Python</p>
-					<p>Flask</p>
-					<p>Pyunit</p>
-					<p>Numpy</p>
-					<p>Pandas</p>
-					<hr />
-					<p>Figma</p>
-					<p>Angular</p>
-					<p>HTML</p>
-					<p>CSS</p>
-					<p>JavaScript</p>
-					<p>LaTeX</p>
-					<hr />
-					<p>Docker</p>
-					<p>WebLogic</p>
-					<p>WebSphere</p>
-					<p>WildFly</p>
-					<p>Tomcat</p>
-				</article>
-			</div>
-		</section>
-		<!-- Personal projects -->
-		<section id="personal-projects" class="two">
-			<div class="container">
-				<header>
-					<h2>Personal projects</h2>
-				</header>
-				<article>
-					<p><a href="https://github.com/JoseMiguel92/urTeam">urTeam</a>
-						<br/>
-						A collaborative project with university classmates to learn the whole lifecycle of a real application with Spring. This
-						project was created from scratch to deployment with Docker.<br>We designed the database structure and created a first page
-						with SpringMVC and mustache for rendering the template. In the next phase the controllers became restControllers and all
-						the business logic and data access was separated from the frontend, which was developed with Angular 4. In this last
-						phase, to deploy the application, we created a docker compose to contain the database, the frontend and the backend.</p>
-				</article>
-			</div>
-		</section>
+		<div id="tech-stack" class="my-4 p-4 bg-gray-900 dark:bg-gray-200 shadow rounded">
+			<h2 class="text-xl text-gray-400 dark:text-gray-700 font-bold">Tecnologías utilizadas</h2>
+			<p class="p-4">
+				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
+					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Java</span>
+					<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
+					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">SpringBoot</span>
+				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
+					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">JUnit</span>
+				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
+					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Mockito</span>
+				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
+					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Hibernate</span>
+				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
+					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">MyBatis</span>
+				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
+					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Python</span>
+					<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
+					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Flask</span>
+				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
+					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Typescript</span>
+				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
+					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Javascript</span>
+				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
+					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">HTML</span>
+				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
+					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">CSS</span>
+				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
+					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">OpenAPI</span>
+				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
+					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Kafka</span>
+				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
+					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Docker</span>
+				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
+					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Kubernetes</span>
+				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
+					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Git</span>
+				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
+					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Subversion</span>
+				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
+					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Sonarqube</span>
+				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
+					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Jenkins</span>
+				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
+					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Gitlab</span>
+			</p>
+		</div>
+		<div id="contact" class="my-4 p-4 bg-gray-900 dark:bg-gray-200 shadow rounded">
+			<h2 class="text-xl text-gray-400 dark:text-gray-700 font-bold">Contacto</h2>
+			<p class="p-4 text-gray-400 dark:text-gray-700"><i class="fa fa-envelope"></i> Puedes ponerte en contacto
+				conmigo en mi dirección de
+				email
+				<span
+					class="font-bold hover:text-gray-500 dark:hover:text-gray-400"><span>jmgbenayas</span><span>@</span><span>gmail.com</span></span>
+			</p>
+			<p class="p-4 text-gray-400 dark:text-gray-700"><i class="fa-brands fa-linkedin"></i> También puedes obtener
+				más información sobre mi en mi perfil de LinkedIn
+				<span><a class="font-bold hover:text-gray-500 dark:hover:text-gray-400"
+						href="https://es.linkedin.com/in/josemiguelgarciabenayas"
+						target="_blank">@josemiguelgarciabenayas</a></span>
+			</p>
+			<p class="p-4 text-gray-400 dark:text-gray-700"><i class="fa-brands fa-github"></i> Además puedes echar in
+				vistazo a todos mis repositorios en GitHub
+				<span><a class="font-bold hover:text-gray-500 dark:hover:text-gray-400"
+						href="https://github.com/JoseMiguel92" target="_blank">@JoseMiguel92</a></span>
+			</p>
+
+		</div>
 	</div>
-	<!-- Footer -->
-	<div id="footer">
-		<!-- Copyright -->
-		<ul class="copyright">
-			<li>&copy; All rights reserved.</li>
-			<li><a href="#">Jose Miguel Garcia Benayas</a></li>
-			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-		</ul>
-	</div>
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/jquery.scrollzer.min.js"></script>
-	<script src="assets/js/skel.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-	<script src="assets/js/main.js"></script>
+
+
 </body>
 
 </html>
