@@ -1,219 +1,761 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Jose Miguel Garcia Benayas</title>
+    <meta name="description" content="Web Page Jose Miguel Garcia Benayas" />
+    <meta
+      name="keywords"
+      content="HTML5, Bootstrap, CSS3, javascript, Java, Python, Docker, Angular, Spring Boot, Kafka, Kubernetes"
+    />
+    <meta name="author" content="Jose Miguel Garcia Benayas" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      @media (min-width: 900px) {
+        .cv-layout {
+          display: flex;
+          align-items: flex-start;
+          gap: 1.5rem;
+          max-width: 1100px;
+          margin: 0 auto;
+          padding: 1rem;
+        }
+        .cv-main {
+          flex: 1 1 0%;
+          min-width: 0;
+          overflow-y: auto;
+        }
+        .cv-sidebar {
+          width: 280px;
+          flex-shrink: 0;
+          position: sticky;
+          top: 1rem;
+          max-height: calc(100vh - 2rem);
+          overflow-y: auto;
+        }
+      }
+      @media (max-width: 899px) {
+        .cv-contentindex {
+          display: none;
+        }
+        .cv-layout {
+          display: flex;
+          flex-direction: column;
+          max-width: 640px;
+          margin: 0 auto;
+          padding: 0.5rem;
+          gap: 0;
+        }
+        .cv-main {
+          order: 1;
+        }
+        .cv-sidebar {
+          order: 2;
+        }
+      }
+      .cv-sidebar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .cv-sidebar::-webkit-scrollbar-thumb {
+        background: #4b5563;
+        border-radius: 2px;
+      }
+      /* Index nav links */
+      .cv-sidebar a {
+        transition:
+          color 0.2s,
+          padding-left 0.2s;
+        display: block;
+        padding: 0.15rem 0;
+      }
+      .cv-sidebar a:hover {
+        padding-left: 4px;
+      }
 
-<head>
-	<!-- Meta Data -->
-	<meta charset="utf-8" />
-	<title>Jose Miguel Garcia Benayas</title>
-	<meta name="description" content="Web Page Jose Miguel Garcia Benayas" />
-	<meta name="keywords" content="HTML5, Bootstrap, CSS3, javascript, Java, Python, Docker, Angular,C, Vue" />
-	<meta name="author" content="Jose Miguel Garcia Benayas" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-	<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-</head>
+      @media (prefers-color-scheme: light) {
+        .cv-contentindex a.active {
+          color: #111827;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-200 dark:bg-gray-900">
+    <div class="cv-layout">
+      <!-- ── MAIN COLUMN (scrollable) ── -->
+      <div class="cv-main">
+        <div
+          id="description"
+          class="my-4 p-4 bg-gray-900 dark:bg-gray-200 shadow rounded"
+        >
+          <h1 class="text-gray-200 dark:text-gray-900 text-xl font-bold">
+            Hola👋, soy Jose Miguel
+          </h1>
+          <h1 class="text-gray-200 dark:text-gray-900 text-l font-bold">
+            Backend Engineer en Madrid 🚀
+          </h1>
+          <p class="p-4 text-gray-200 dark:text-gray-900">
+            Soy un apasionado de la tecnología 👨🏻‍💻, salir a correr 🏃🏻‍♂️, y montar
+            en bicicleta 🚴‍♂️. En mi tiempo libre, me encanta aprender cosas
+            nuevas y trabajar en proyectos personales que supongan un reto para
+            mejorar mis habilidades en el ámbito de la programación usando
+            lenguajes como Java, Python, y Typescript.
+          </p>
+          <p class="p-4 text-gray-200 dark:text-gray-900">
+            Me he especializado en aplicaciones empresariales usando Spring
+            Boot, con intercambio de mensajes mediante colas de mensajes
+            (Kafka), servicios REST y SOAP. Me gusta enfocarme 🎯 en el
+            rendimiento de los sistemas, las buenas prácticas en el código, y
+            las pruebas del mismo.
+          </p>
+        </div>
 
-<body class="bg-gray-200 dark:bg-gray-900">
-	<div class="mx-auto max-w-md md:max-w-2xl">
-		<div id="description" class="my-4 p-4 bg-gray-900 dark:bg-gray-200 shadow rounded">
-			<h1 class="text-gray-200 dark:text-gray-900 text-xl font-bold">Hola👋, soy Jose Miguel</h1>
-			<h1 class="text-gray-200 dark:text-gray-900 text-l font-bold">Ingeniero Software en Madrid 🚀
-			</h1>
-			<p class="p-4 text-gray-200 dark:text-gray-900">Soy un apasionado de la tecnología 👨🏻‍💻, salir a correr
-				🏃🏻‍♂️, y montar en bicicleta 🚴‍♂️. En mi tiempo libre, me encanta aprender cosas nuevas y trabajar en
-				proyectos personales que supongan un reto para mejorar mis habilidades en el ámbito de la programación
-				usando lenguajes como Java, Python, y Typescript.</p>
-			<p class="p-4 text-gray-200 dark:text-gray-900">Me he especializado en aplicaciones empresariales usando
-				Spring Boot,con intercambio de mensajes mediante colas de mensajes (Kafka), servicios REST y SOAP.
-				Me gusta enfocarme 🎯 en el rendimiento de los sistemas,
-				las buenas prácticas en el código, y las pruebas del mismo.</p>
-		</div>
-		<div id="work-experience" class="my-4 p-4 bg-gray-900 dark:bg-gray-200 shadow rounded">
-			<h2 class="text-xl text-gray-400 dark:text-gray-700 font-bold">Experiencia profesional</h2>
-			<ol class="relative border-s border-gray-700 dark:border-gray-700">
-				<li class="mb-10 ms-4">
-					<div
-						class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
-					</div>
-					<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Enero
-						2020 - Actualmente</time>
-					<h3 class="text-lg font-bold text-gray-400 dark:text-gray-700">BNP Paribas Personal Finance
-						(Tecdata Engineering), Madrid
-					</h3>
-					<ul class="mb-4 p-4 text-base font-normal text-gray-400 dark:text-gray-700">
-						<li class="mb-2">Diseño y desarrollo de microservicios en <strong>Java 8</strong> y
-							<strong>17</strong> con <strong>Spring Boot</strong> para
-							sistemas financieros críticos.
-						</li>
-						<li class="mb-2">Implementación y optimización de integraciones con <strong>Kafka</strong> para
-							mensajería asíncrona.</li>
-						<li class="mb-2">Desarrollo de servicios REST con <strong>OpenAPI</strong> y arquitecturas
-							orientadas a
-							microservicios en entornos <strong>Cloud (IBM Cloud, Kubernetes)</strong>.</li>
-						<li class="mb-2">Implementación de pruebas unitarias con <strong>JUnit</strong> y
-							<strong>Mockito</strong>.
-						</li>
-						<li class="mb-2">Gestión de bases de datos Oracle con <strong>MyBatis</strong>.</li>
-						<li class="mb-2">Creación de scripts en <strong>Python</strong> para automatización y generación
-							de proyectos.
-						</li>
-						<li class="mb-2">Desarrollo frontend de <strong>Single Page Applications (SPA)</strong> en
-							<strong>Angular</strong>.
-						</li>
-						<li class="mb-2">Implementación de CI/CD en <strong>GitLab</strong> y <strong>Jenkins</strong>,
-							asegurando despliegues automatizados y eficientes.</li>
-						<li class="mb-2">Control de calidad del código mediante <strong>SonarQube</strong> y versionado
-							con <strong>Git</strong>.</li>
-						<li class="">Trabajo en entornos multidisciplinares ágiles y colaborativos.</li>
-					</ul>
-				</li>
-				<li class="mb-10 ms-4">
-					<div
-						class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
-					</div>
-					<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Febrero 2019 -
-						Enero 2020</time>
-					<h3 class="text-lg font-bold text-gray-400 dark:text-gray-700">Ingeniero software en Fujitsu
-						Technology Solutions (Experis), Madrid
-					</h3>
-					<ul class="mb-4 p-4 text-base font-normal text-gray-400 dark:text-gray-700">
-						<li class="mb-2">Evolución y mantenimiento de aplicaciones web empresariales en <strong>Java
-								6</strong> con <strong>Java Server Pages</strong>.
-						</li>
-						<li class="mb-2">Desarrollo de servicios <strong>SOAP</strong> con <strong>Apache CXF</strong> y
-							<strong>REST</strong> con <strong>Spring</strong>, asegurando la integración con sistemas
-							externos.
-						</li>
-						<li class="mb-2">Integración de clientes <strong>SOAP</strong> y <strong>REST</strong> para
-							consumo de servicios de terceros. 
-						</li>
-						<li class="mb-2">Gestión de bases de datos Oracle con
-							<strong>Hibernate</strong>.
-						</li>
-						<li class="mb-2">Desarrollo frontend en <strong>HTML</strong>, <strong>CSS</strong> y
-							<strong>JavaScript</strong>, aplicando principios de accesibilidad y usabilidad.
-						</li>
-						<li class="mb-2">Implementación de pruebas unitarias con <strong>JUnit</strong> y
-							<strong>Mockito</strong>.
-						</li>
-						<li class="mb-2">Control de calidad del código con <strong>SonarQube</strong> y control de
-							versiones mediante <strong>Subversion</strong>.
-						</li>
-						<li class="">Despliegue y configuración de aplicaciones en <strong>IBM WebSphere</strong>.
-						</li>
-					</ul>
-				</li>
-				<li class="mb-10 ms-4">
-					<div
-						class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
-					</div>
-					<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Septiembre 2017
-						- Junio 2018</time>
-					<h3 class="text-lg font-semibold text-gray-400 dark:text-gray-700">Prácticas en Fujitsu Technology
-						Solutions, Madrid</h3>
-					<ul class="mb-4 p-4 text-base font-normal text-gray-400 dark:text-gray-700">
-						<li class="mb-2">Investigación sobre la plataforma <strong>K5 Cloud</strong> y su aplicación en
-							entornos empresariales.
-						</li>
-						<li class="mb-2">Desarrollo de aplicaciones web en <strong>Java 8</strong> con <strong>Spring
-								Boot</strong>, aplicando la metodología <strong>Twelve-Factor App</strong> para
-							despliegues en cloud.</li>
-						<li class="mb-2">Creación e integración de servicios web <strong>SOAP</strong> para comunicación
-							entre sistemas.</li>
-						<li class="mb-2">Implementación de pruebas unitarias con <strong>JUnit</strong> y despliegue de
-							aplicaciones en <strong>Tomcat</strong>.
-						</li>
-						<li class="">Control de versiones con <strong>Subversion</strong> y documentación técnica de
-							procesos y soluciones.</li>
-					</ul>
-				</li>
-			</ol>
-		</div>
-		<div id="academic" class="my-4 p-4 bg-gray-900 dark:bg-gray-200 shadow rounded">
-			<h2 class="text-xl text-gray-400 dark:text-gray-700 font-bold">Formación académica</h2>
-			<ul class="mb-4 p-4 text-base font-normal text-gray-400 dark:text-gray-700 list-disc">
-				<li class="mb-2 font-semibold">Grado en Ingeniería Software Universidad Rey Juan Carlos, 2020</li>
-				<li class="mb-2 font-medium">Angular y Angular avanzado Udemy, 2024</li>
-				<li class="mb-2 font-medium">Reactive Architecture: Domain Driven Design Cognitive Class, 2023</li>
-				<li class="mb-2 font-medium">Introduction to Containers, Kubernetes, and OpenShift V2 Cognitive Class, 2023</li>
-				<li class="mb-2 font-medium">Scrum Foundations Professional Certificate CertiProf, 2021</li>
-				<li class="mb-2 font-medium">Docker - Guía práctica de uso para desarrolladores Udemy, 2020</li>
-				<li class="font-medium">Agilidad y Lean Gestionando los proyectos y negocios del s. XXI MiriadaX, 2016</li>
-			</ul>
-		</div>
+        <div
+          id="work-experience"
+          class="my-4 p-4 bg-gray-900 dark:bg-gray-200 shadow rounded"
+        >
+          <h2 class="text-xl text-gray-400 dark:text-gray-700 font-bold">
+            Experiencia profesional
+          </h2>
+          <ol
+            class="relative border-s border-gray-700 dark:border-gray-700 mt-4"
+          >
+            <li class="mb-10 ms-4">
+              <div
+                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+              ></div>
+              <time
+                class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+                >Ene. 2020 – Actualidad</time
+              >
+              <h3 class="text-lg font-bold text-gray-400 dark:text-gray-700">
+                Ingeniero de Software · BNP Paribas Personal Finance (Tecdata
+                Engineering), Madrid
+              </h3>
+              <div class="my-2 flex flex-wrap gap-1">
+                <span
+                  class="text-xs px-2 py-0.5 rounded bg-gray-700 dark:bg-gray-300 text-gray-300 dark:text-gray-700"
+                  >Java 17</span
+                >
+                <span
+                  class="text-xs px-2 py-0.5 rounded bg-gray-700 dark:bg-gray-300 text-gray-300 dark:text-gray-700"
+                  >Spring Boot</span
+                >
+                <span
+                  class="text-xs px-2 py-0.5 rounded bg-gray-700 dark:bg-gray-300 text-gray-300 dark:text-gray-700"
+                  >Kafka</span
+                >
+                <span
+                  class="text-xs px-2 py-0.5 rounded bg-gray-700 dark:bg-gray-300 text-gray-300 dark:text-gray-700"
+                  >Angular</span
+                >
+                <span
+                  class="text-xs px-2 py-0.5 rounded bg-gray-700 dark:bg-gray-300 text-gray-300 dark:text-gray-700"
+                  >Kubernetes</span
+                >
+                <span
+                  class="text-xs px-2 py-0.5 rounded bg-gray-700 dark:bg-gray-300 text-gray-300 dark:text-gray-700"
+                  >GitLab CI/CD</span
+                >
+              </div>
+              <ul
+                class="mb-4 ps-4 text-base font-normal text-gray-400 dark:text-gray-700 space-y-1.5 list-none"
+              >
+                <li>
+                  ▸ Apoyo técnico del equipo: soporte transversal, adquisición
+                  de requisitos con negocio y resolución de incidencias en
+                  producción.
+                </li>
+                <li>
+                  ▸ Comunicación con equipos técnicos internacionales para
+                  coordinar, integrar y alinear soluciones.
+                </li>
+                <li>
+                  ▸ Optimización del pipeline de build en software legacy:
+                  reducción del tiempo de construcción y despliegue.
+                </li>
+                <li>
+                  ▸ Desarrollo de scripts en <strong>Python</strong> para
+                  automatizar la generación de despliegues, eliminando pasos
+                  manuales y reduciendo errores operativos.
+                </li>
+                <li>
+                  ▸ Diseño y desarrollo de microservicios en
+                  <strong>Java 8 y 17</strong> con
+                  <strong>Spring Boot</strong> para sistemas financieros
+                  críticos de alta disponibilidad.
+                </li>
+                <li>
+                  ▸ Integración de mensajería asíncrona con
+                  <strong>Kafka</strong> y despliegue en entornos Cloud (<strong
+                    >IBM Cloud, Kubernetes</strong
+                  >).
+                </li>
+                <li>
+                  ▸ Contribución en decisiones de arquitectura frontend
+                  (<strong>Angular</strong>) y backend en nuevos proyectos,
+                  aportando visión fullstack desde el inicio.
+                </li>
+                <li>
+                  ▸ Pipelines de <strong>CI/CD</strong> en GitLab y Jenkins con
+                  control de calidad automatizado mediante
+                  <strong>SonarQube</strong>.
+                </li>
+              </ul>
+            </li>
+            <li class="mb-4 ms-4">
+              <div
+                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+              ></div>
+              <time
+                class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+                >Sept. 2017 – Ene. 2020</time
+              >
+              <h3 class="text-lg font-bold text-gray-400 dark:text-gray-700">
+                Ingeniero de Software · Fujitsu Technology Solutions (Experis),
+                Madrid
+              </h3>
+              <div class="my-2 flex flex-wrap gap-1">
+                <span
+                  class="text-xs px-2 py-0.5 rounded bg-gray-700 dark:bg-gray-300 text-gray-300 dark:text-gray-700"
+                  >Java 8</span
+                >
+                <span
+                  class="text-xs px-2 py-0.5 rounded bg-gray-700 dark:bg-gray-300 text-gray-300 dark:text-gray-700"
+                  >Spring</span
+                >
+                <span
+                  class="text-xs px-2 py-0.5 rounded bg-gray-700 dark:bg-gray-300 text-gray-300 dark:text-gray-700"
+                  >SOAP/REST</span
+                >
+                <span
+                  class="text-xs px-2 py-0.5 rounded bg-gray-700 dark:bg-gray-300 text-gray-300 dark:text-gray-700"
+                  >Oracle</span
+                >
+                <span
+                  class="text-xs px-2 py-0.5 rounded bg-gray-700 dark:bg-gray-300 text-gray-300 dark:text-gray-700"
+                  >Hibernate</span
+                >
+                <span
+                  class="text-xs px-2 py-0.5 rounded bg-gray-700 dark:bg-gray-300 text-gray-300 dark:text-gray-700"
+                  >IBM WebSphere</span
+                >
+              </div>
+              <ul
+                class="mb-4 ps-4 text-base font-normal text-gray-400 dark:text-gray-700 space-y-1.5 list-none"
+              >
+                <li>
+                  ▸ Evolución y mantenimiento de aplicaciones web empresariales
+                  en <strong>Java 6</strong> con JSP.
+                </li>
+                <li>
+                  ▸ Desarrollo e integración de servicios
+                  <strong>SOAP</strong> (Apache CXF) y
+                  <strong>REST</strong> (Spring) con sistemas externos.
+                </li>
+                <li>
+                  ▸ Gestión de bases de datos Oracle con
+                  <strong>Hibernate</strong> y despliegue en
+                  <strong>IBM WebSphere</strong>.
+                </li>
+                <li>
+                  ▸ Desarrollo frontend en
+                  <strong>HTML, CSS y JavaScript</strong> aplicando principios
+                  de accesibilidad.
+                </li>
+                <li>
+                  ▸ Desarrollo de aplicaciones web siguiendo la metodología
+                  <strong>Twelve-Factor App</strong> para arquitecturas
+                  cloud-native.
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </div>
 
-		<div id="tech-stack" class="my-4 p-4 bg-gray-900 dark:bg-gray-200 shadow rounded">
-			<h2 class="text-xl text-gray-400 dark:text-gray-700 font-bold">Tecnologías utilizadas</h2>
-			<p class="p-4">
-				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
-					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Java</span>
-					<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
-					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">SpringBoot</span>
-				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
-					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">JUnit</span>
-				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
-					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Mockito</span>
-				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
-					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Hibernate</span>
-				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
-					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">MyBatis</span>
-				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
-					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Python</span>
-					<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
-					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Flask</span>
-				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
-					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Typescript</span>
-				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
-					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Javascript</span>
-				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
-					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">HTML</span>
-				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
-					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">CSS</span>
-				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
-					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">OpenAPI</span>
-				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
-					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Kafka</span>
-				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
-					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Docker</span>
-				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
-					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Kubernetes</span>
-				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
-					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Git</span>
-				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
-					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Subversion</span>
-				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
-					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Sonarqube</span>
-				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
-					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Jenkins</span>
-				<span class="mb-1 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
-					border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700">Gitlab</span>
-			</p>
-		</div>
-		<div id="contact" class="my-4 p-4 bg-gray-900 dark:bg-gray-200 shadow rounded">
-			<h2 class="text-xl text-gray-400 dark:text-gray-700 font-bold">Contacto</h2>
-			<p class="p-4 text-gray-400 dark:text-gray-700"><i class="fa fa-envelope"></i> Puedes ponerte en contacto
-				conmigo en mi dirección de
-				email
-				<span
-					class="font-bold hover:text-gray-500 dark:hover:text-gray-400"><span>jmgbenayas</span><span>@</span><span>gmail.com</span></span>
-			</p>
-			<p class="p-4 text-gray-400 dark:text-gray-700"><i class="fa-brands fa-linkedin"></i> También puedes obtener
-				más información sobre mi en mi perfil de LinkedIn
-				<span><a class="font-bold hover:text-gray-500 dark:hover:text-gray-400"
-						href="https://es.linkedin.com/in/josemiguelgarciabenayas"
-						target="_blank">@josemiguelgarciabenayas</a></span>
-			</p>
-			<p class="p-4 text-gray-400 dark:text-gray-700"><i class="fa-brands fa-github"></i> Además puedes echar in
-				vistazo a todos mis repositorios en GitHub
-				<span><a class="font-bold hover:text-gray-500 dark:hover:text-gray-400"
-						href="https://github.com/JoseMiguel92" target="_blank">@JoseMiguel92</a></span>
-			</p>
+        <div
+          id="academic"
+          class="my-4 p-4 bg-gray-900 dark:bg-gray-200 shadow rounded"
+        >
+          <h2 class="text-xl text-gray-400 dark:text-gray-700 font-bold">
+            Formación académica
+          </h2>
+          <ul
+            class="mb-4 p-4 text-base font-normal text-gray-400 dark:text-gray-700 space-y-1.5"
+          >
+            <li class="font-semibold">
+              🎓 Grado en Ingeniería del Software — Universidad Rey Juan Carlos
+              · 2014 – 2020
+            </li>
+          </ul>
+          <h2 class="text-xl text-gray-400 dark:text-gray-700 font-bold">
+            Formación complementaria
+          </h2>
+          <ul
+            class="mb-4 p-4 text-base font-normal text-gray-400 dark:text-gray-700 space-y-1.5 list-disc"
+          >
+            <li>
+              <span class="font-medium">API REST con Spring Boot Avanzado</span>
+              · Tecnofor (Microservicios, Spring Cloud, Feign, Eureka, Hystrix,
+              Zuul, MongoDB) · 2024
+            </li>
+            <li>
+              <span class="font-medium">Angular y Angular Avanzado</span> ·
+              DevTaller – Fernando Herrera – Udemy · 2024
+            </li>
+            <li>
+              <span class="font-medium"
+                >Reactive Architecture: Domain Driven Design</span
+              >
+              · Cognitive Class · 2023
+            </li>
+            <li>
+              <span class="font-medium"
+                >Introduction to Containers, Kubernetes &amp; OpenShift V2</span
+              >
+              · Cognitive Class · 2023
+            </li>
+            <li>
+              <span class="font-medium"
+                >Scrum Foundations Professional Certificate</span
+              >
+              · CertiProf · 2021
+            </li>
+            <li>
+              <span class="font-medium"
+                >Docker – Guía práctica para desarrolladores</span
+              >
+              · DevTaller – Fernando Herrera – Udemy · 2020
+            </li>
+            <li>
+              <span class="font-medium"
+                >Agilidad y Lean: Gestionando proyectos del s. XXI</span
+              >
+              · Javier Garzás – MiriadaX · 2016
+            </li>
+          </ul>
+        </div>
 
-		</div>
-	</div>
+        <div
+          id="personal-projects"
+          class="my-4 p-4 bg-gray-900 dark:bg-gray-200 shadow rounded"
+        >
+          <h2 class="text-xl text-gray-400 dark:text-gray-700 font-bold mb-3">
+            Proyectos personales
+          </h2>
+          <div class="mb-3">
+            <div id="app-personal-finances" class="block rounded-lg">
+              <img
+                alt="personal finances application"
+                src="images/personal-finances-gbdevs-mockup-compress.jpg"
+                class="h-56 w-full rounded-t-md object-cover object-top"
+              />
 
+              <div
+                class="mb-4 p-4 text-base font-normal text-gray-400 dark:text-gray-700 space-y-1.5 list-disc border-x border-b border-gray-400 rounded-b-lg"
+              >
+                <div>
+                  <dl>
+                    <dd class="font-medium">Personal Finances</dd>
+                    <dd
+                      class="line-clamp-2 text-sm text-gray-300 dark:text-gray-700"
+                    >
+                      Una PWA mobile-first para gestionar gastos e ingresos en
+                      un solo lugar, con una UX simplificada y enfocada en el
+                      rendimiento. Pero más allá de la utilidad, este proyecto
+                      ha sido mi laboratorio para profundizar en conocimientos
+                      de arquitectura, integración de servicios y DevOps.
+                    </dd>
+                  </dl>
+                  <div class="w-full justify-items-end">
+                    <div class="flex gap-2">
+                      <div>
+                        <a
+                          href="https://www.linkedin.com/posts/josemiguelgarciabenayas_webdevelopment-angular-springboot-share-7416402479044603905-owc2/?utm_source=share&utm_medium=member_desktop&rcm=ACoAABOTm2YBjaCf_4vkUF81B7X1-7p6JTc9qB4"
+                          target="_blank"
+                        >
+                          <span
+                            class="text-xs px-2 py-0.5 rounded bg-gray-700 dark:bg-gray-700 text-gray-300 dark:text-gray-300"
+                            >Leer más</span
+                          >
+                        </a>
+                      </div>
+                      <div>
+                        <a
+                          href="https://personalfinances-gbdevs.netlify.app/"
+                          target="_blank"
+                          ><span
+                            class="text-xs px-2 py-0.5 rounded bg-gray-700 dark:bg-gray-700 text-gray-300 dark:text-gray-300"
+                            >Iniciar</span
+                          ></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-</body>
+            <div id="app-pace-the-rhythm" class="block rounded-lg">
+              <img
+                alt="personal finances application"
+                src="images/pace-the-rhythm-gbdevs-mockup-compress.png"
+                class="h-56 w-full rounded-t-md object-cover object-top hidden dark:block"
+              />
+              <img
+                alt="personal finances application"
+                src="images/pace-the-rhythm-gbdevs-mockup-compress-light.png"
+                class="h-56 w-full rounded-t-md object-cover object-top block dark:hidden"
+              />
 
+              <div
+                class="mb-4 p-4 text-base font-normal text-gray-400 dark:text-gray-700 space-y-1.5 list-disc border-x border-b border-gray-400 rounded-b-lg"
+              >
+                <div>
+                  <dl>
+                    <dd class="font-medium">Pace The Rhythm</dd>
+                    <dd
+                      class="line-clamp-2 text-sm text-gray-300 dark:text-gray-700"
+                    >
+                      Aplicación web orientada a dispositivos móviles con la que
+                      puedes encontrar la música adecuada para tu ritmo de
+                      carrera. Desarrollada completamente en typescript con
+                      conexión a API externa para la obtención de las canciones
+                      según la conversión bidireccional de BPM y ritmo de reloj
+                      en carrera
+                    </dd>
+                  </dl>
+                  <div class="w-full justify-items-end">
+                    <div class="flex gap-2">
+                      <div>
+                        <a
+                          href="https://github.com/JoseMiguel92/pace-the-rhythm"
+                          target="_blank"
+                        >
+                          <span
+                            class="text-xs px-2 py-0.5 rounded bg-gray-700 dark:bg-gray-700 text-gray-300 dark:text-gray-300"
+                            >Leer más</span
+                          >
+                        </a>
+                      </div>
+                      <div>
+                        <a
+                          href="https://pace-the-rhythm.vercel.app/"
+                          target="_blank"
+                          ><span
+                            class="text-xs px-2 py-0.5 rounded bg-gray-700 dark:bg-gray-700 text-gray-300 dark:text-gray-300"
+                            >Iniciar</span
+                          ></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="tech-stack"
+          class="my-4 p-4 bg-gray-900 dark:bg-gray-200 shadow rounded"
+        >
+          <h2 class="text-xl text-gray-400 dark:text-gray-700 font-bold mb-3">
+            Tecnologías utilizadas
+          </h2>
+          <div class="mb-3">
+            <p
+              class="text-sm text-gray-500 dark:text-gray-500 font-semibold uppercase tracking-wide mb-2 px-1"
+            >
+              Backend
+            </p>
+            <p class="px-1">
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >Java 8 / 17</span
+              >
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >Spring Boot</span
+              >
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >Spring Cloud</span
+              >
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >Microservicios</span
+              >
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >Kafka</span
+              >
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >REST / SOAP / OpenAPI</span
+              >
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >JUnit</span
+              >
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >Mockito</span
+              >
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >Oracle</span
+              >
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >MyBatis</span
+              >
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >Hibernate</span
+              >
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >MongoDB</span
+              >
+            </p>
+          </div>
+          <div class="mb-3">
+            <p
+              class="text-sm text-gray-500 dark:text-gray-500 font-semibold uppercase tracking-wide mb-2 px-1"
+            >
+              Frontend
+            </p>
+            <p class="px-1">
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >Angular (v14+)</span
+              >
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >TypeScript</span
+              >
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >JavaScript</span
+              >
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >HTML</span
+              >
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >CSS</span
+              >
+            </p>
+          </div>
+          <div class="mb-3">
+            <p
+              class="text-sm text-gray-500 dark:text-gray-500 font-semibold uppercase tracking-wide mb-2 px-1"
+            >
+              DevOps &amp; Cloud
+            </p>
+            <p class="px-1">
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >Docker</span
+              >
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >Kubernetes</span
+              >
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >IBM Cloud</span
+              >
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >GitLab CI/CD</span
+              >
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >Jenkins</span
+              >
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >SonarQube</span
+              >
+            </p>
+          </div>
+          <div>
+            <p
+              class="text-sm text-gray-500 dark:text-gray-500 font-semibold uppercase tracking-wide mb-2 px-1"
+            >
+              Otros
+            </p>
+            <p class="px-1">
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >Python</span
+              >
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >Git</span
+              >
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >Subversion</span
+              >
+              <span
+                class="mb-1 inline-flex items-center py-1.5 px-3 rounded-full text-xs font-medium border border-gray-400 text-gray-400 dark:border-gray-700 dark:text-gray-700"
+                >Scrum / Agile</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- end .cv-main -->
+
+      <!-- ── SIDEBAR (sticky on desktop, bottom on mobile) ── -->
+      <aside class="cv-sidebar">
+        <!-- Index / Navigation -->
+        <div
+          id="contentindex"
+          class="cv-contentindex my-4 p-4 bg-gray-900 dark:bg-gray-200 shadow rounded"
+        >
+          <ul class="space-y-2 text-sm text-gray-400 dark:text-gray-700">
+            <li>
+              <a
+                class="hover:text-gray-300 dark:hover:text-gray-500 font-medium"
+                href="#work-experience"
+              >
+                Experiencia profesional
+              </a>
+            </li>
+            <li>
+              <a
+                class="hover:text-gray-300 dark:hover:text-gray-500 font-medium"
+                href="#academic"
+              >
+                Formación
+              </a>
+            </li>
+            <li>
+              <a
+                class="hover:text-gray-300 dark:hover:text-gray-500 font-medium"
+                href="#personal-projects"
+              >
+                Proyectos personales
+              </a>
+            </li>
+            <li>
+              <a
+                class="hover:text-gray-300 dark:hover:text-gray-500 font-medium"
+                href="#tech-stack"
+              >
+                Tecnologías utilizadas
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div
+          id="contact"
+          class="my-4 p-4 bg-gray-900 dark:bg-gray-200 shadow rounded"
+        >
+          <h2 class="text-xl text-gray-400 dark:text-gray-700 font-bold mb-3">
+            Contacto
+          </h2>
+          <ul class="space-y-3 text-gray-400 dark:text-gray-700 text-sm">
+            <li class="flex items-start gap-2">
+              <i class="fa fa-envelope mt-0.5 text-gray-500"></i>
+              <a
+                class="hover:text-gray-300 dark:hover:text-gray-500 break-all"
+                href="mailto:jmgbenayas@gmail.com"
+              >
+                <span>jmgbenayas</span><span>@</span><span>gmail.com</span>
+              </a>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-brands fa-linkedin mt-0.5 text-gray-500"></i>
+              <a
+                class="hover:text-gray-300 dark:hover:text-gray-500 break-all font-medium"
+                href="https://es.linkedin.com/in/josemiguelgarciabenayas"
+                target="_blank"
+              >
+                josemiguelgarciabenayas
+              </a>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-brands fa-github mt-0.5 text-gray-500"></i>
+              <a
+                class="hover:text-gray-300 dark:hover:text-gray-500 font-medium"
+                href="https://github.com/JoseMiguel92"
+                target="_blank"
+              >
+                JoseMiguel92
+              </a>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa fa-location-dot mt-0.5 text-gray-500"></i>
+              <span>Madrid, España</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Languages -->
+        <div
+          id="languages"
+          class="my-4 p-4 bg-gray-900 dark:bg-gray-200 shadow rounded"
+        >
+          <h2 class="text-xl text-gray-400 dark:text-gray-700 font-bold mb-3">
+            Idiomas
+          </h2>
+          <ul class="space-y-2 text-sm text-gray-400 dark:text-gray-700">
+            <li class="flex justify-between items-center">
+              <span class="font-medium">Español</span>
+              <span class="text-xs text-gray-500 dark:text-gray-500"
+                >Nativo</span
+              >
+            </li>
+            <li class="flex justify-between items-center">
+              <span class="font-medium">Inglés</span>
+              <span class="text-xs text-gray-500 dark:text-gray-500"
+                >Uso profesional</span
+              >
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <!-- end .cv-sidebar -->
+    </div>
+    <!-- end .cv-layout -->
+
+    <script>
+      // Smooth scroll with offset compensation (in case of future sticky headers)
+      document
+        .querySelectorAll('.cv-contentindex a[href^="#"]')
+        .forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (!target) return;
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          });
+        });
+
+      // Highlight active index link based on scroll position
+      const sections = ["work-experience", "academic", "personal", "tech-stack"]
+        .map((id) => document.getElementById(id))
+        .filter(Boolean);
+
+      const navLinks = document.querySelectorAll(
+        '.cv-contentindex a[href^="#"]',
+      );
+    </script>
+  </body>
 </html>
