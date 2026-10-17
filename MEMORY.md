@@ -8,7 +8,7 @@ Memoria del proyecto entre sesiones. Máximo ~50 líneas: resume o elimina lo qu
 
 ## Decisiones (y por qué)
 
-- Sin backend ni dependencias: se abre con doble clic. Fecha editable: permite registrar días pasados y ver la racha crecer.
+- Sin backend ni dependencias: se abre con doble clic.
 
 ## Aprendizajes y errores a evitar
 

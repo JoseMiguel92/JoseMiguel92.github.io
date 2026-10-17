@@ -24,7 +24,7 @@ Web estática para mostrar mi portfolio personal.
 
 ## Datos
 
-- Toda la información relativa al portfolio se encuentra en la carpeta cv-data.
+- El origen de los datos son en formato markdown, dentro de la carpeta cv-data.
 
 ## Forma de trabajar
 
