@@ -1,0 +1,267 @@
+/*
+ * styles-cv.css — Styles for the CV page (cv.html) only.
+ *
+ * All the styling of the CV page lives here (RF-7). No @import, no external
+ * fonts and no CDN (RN-1): only the system font stack.
+ *
+ * Palette: the grays already used by index.html (Tailwind gray scale).
+ *   gray-200 #e5e7eb   gray-300 #d1d5db   gray-400 #9ca3af
+ *   gray-500 #6b7280   gray-700 #374151   gray-800 #1f2937
+ *   gray-900 #111827
+ *
+ * Light mode keeps the index.html look: light page with dark cards and light
+ * text. Dark mode inverts it: dark page with a lighter card.
+ *
+ * Contrast note: the plan proposed body text `gray-700` and dark-mode headings
+ * `gray-700`. Both are unreadable on the dark/dark-gray cards used here, so the
+ * body text is `gray-300` and headings stay `gray-400`/`gray-300`, which keeps
+ * every text above 4.5:1 contrast in both modes.
+ */
+
+/* ── Palette ─────────────────────────────────────────────────────────────── */
+
+:root {
+  color-scheme: light;
+
+  --page-bg: #e5e7eb; /* gray-200 */
+  --doc-bg: #111827; /* gray-900 */
+  --text: #d1d5db; /* gray-300 */
+  --heading: #9ca3af; /* gray-400 */
+  --muted: #9ca3af; /* gray-400 */
+  /* Dividers one step brighter than the card so hr/quotes stay visible. */
+  --border: #6b7280; /* gray-500 */
+  /* Code panel one step lighter than the gray-900 card. */
+  --code-bg: #374151; /* gray-700 */
+  --code-text: #e5e7eb; /* gray-200 */
+  --link: #e5e7eb; /* gray-200 */
+  --link-hover: #f3f4f6; /* gray-100 */
+  --focus: #9ca3af; /* gray-400 */
+  --error-bg: #e5e7eb; /* gray-200 */
+  --error-text: #111827; /* gray-900 */
+  --error-accent: #6b7280; /* gray-500 */
+  --shadow: 0 10px 25px rgba(17, 24, 39, 0.25);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --page-bg: #111827; /* gray-900 */
+    --doc-bg: #374151; /* gray-700 */
+    --text: #d1d5db; /* gray-300 */
+    --heading: #d1d5db; /* gray-300 */
+    --muted: #d1d5db; /* gray-300 */
+    --border: #9ca3af; /* gray-400 */
+    --code-bg: #111827; /* gray-900 */
+    --code-text: #e5e7eb; /* gray-200 */
+    --link: #e5e7eb; /* gray-200 */
+    --link-hover: #f3f4f6; /* gray-100 */
+    --focus: #e5e7eb; /* gray-200 */
+    --error-bg: #e5e7eb; /* gray-200 */
+    --error-text: #111827; /* gray-900 */
+    --error-accent: #6b7280; /* gray-500 */
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+  }
+}
+
+/* ── Base ────────────────────────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Base font size is never below 16px (CF-8). */
+  font-size: 16px;
+}
+
+/* Long unbreakable strings (URLs, e-mails, code) must never widen the page. */
+html,
+body {
+  max-width: 100%;
+}
+
+body.cv-page {
+  margin: 0;
+  padding: 1rem 0.75rem;
+  min-height: 100vh;
+  background-color: var(--page-bg);
+  color: var(--text);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 1rem;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ── Document container ──────────────────────────────────────────────────── */
+
+.cv-document {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: clamp(1rem, 4vw, 2.5rem);
+  background-color: var(--doc-bg);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+  overflow-wrap: break-word;
+}
+
+.cv-content {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+/* ── Error message (RF-3 / CF-7) ─────────────────────────────────────────── */
+
+/* Inverted box: clearly visible in both light and dark mode, not just a colour. */
+.cv-error {
+  margin: 0 0 1.5rem;
+  padding: 1rem 1.25rem;
+  background-color: var(--error-bg);
+  color: var(--error-text);
+  border: 2px solid var(--error-accent);
+  border-left-width: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+.cv-error[hidden] {
+  display: none;
+}
+
+/* ── Headings ────────────────────────────────────────────────────────────── */
+
+.cv-content h1,
+.cv-content h2,
+.cv-content h3 {
+  margin: 1.75em 0 0.6em;
+  color: var(--heading);
+  font-weight: 700;
+  line-height: 1.25;
+  overflow-wrap: break-word;
+}
+
+.cv-content > :first-child {
+  margin-top: 0;
+}
+
+.cv-content h1 {
+  font-size: 1.75rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.4rem;
+}
+
+.cv-content h2 {
+  font-size: 1.4rem;
+}
+
+.cv-content h3 {
+  font-size: 1.15rem;
+}
+
+/* ── Text ────────────────────────────────────────────────────────────────── */
+
+.cv-content p {
+  margin: 0 0 1rem;
+}
+
+.cv-content strong {
+  color: var(--link);
+  font-weight: 700;
+}
+
+.cv-content em {
+  font-style: italic;
+}
+
+/* ── Links ───────────────────────────────────────────────────────────────── */
+
+.cv-content a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  overflow-wrap: anywhere;
+}
+
+.cv-content a:hover {
+  color: var(--link-hover);
+  text-decoration-thickness: 2px;
+}
+
+.cv-content a:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 0.15rem;
+}
+
+/* ── Lists ───────────────────────────────────────────────────────────────── */
+
+.cv-content ul,
+.cv-content ol {
+  margin: 0 0 1rem;
+  padding-inline-start: 1.5rem;
+}
+
+.cv-content li {
+  margin: 0.25rem 0;
+}
+
+.cv-content li::marker {
+  color: var(--muted);
+}
+
+/* ── Inline code and code blocks ─────────────────────────────────────────── */
+
+.cv-content code {
+  font-family:
+    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
+  font-size: 0.9em;
+  background-color: var(--code-bg);
+  color: var(--code-text);
+  padding: 0.1em 0.35em;
+  border-radius: 0.25rem;
+  overflow-wrap: anywhere;
+}
+
+.cv-content pre {
+  margin: 0 0 1rem;
+  max-width: 100%;
+  padding: 1rem;
+  background-color: var(--code-bg);
+  color: var(--code-text);
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cv-content pre code {
+  display: block;
+  padding: 0;
+  background: none;
+  color: inherit;
+  font-size: 0.875rem;
+  white-space: pre;
+  overflow-wrap: normal;
+}
+
+/* ── Blockquote and rule ─────────────────────────────────────────────────── */
+
+.cv-content blockquote {
+  margin: 0 0 1rem;
+  padding: 0.25rem 0 0.25rem 1rem;
+  border-left: 0.25rem solid var(--border);
+  color: var(--muted);
+  font-style: italic;
+}
+
+.cv-content hr {
+  margin: 1.75rem 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
